@@ -1,0 +1,3 @@
+<template name="evaluatesItem">
+<view class="more_pj" bindtap="morePj">更多评价></view>
+</template>

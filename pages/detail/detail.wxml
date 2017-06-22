@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<!--<view class="container">-->
+<import src="../common/details/details.wxml"/>
+<import src="../common/details/evaluate.wxml"/>
+<template is="detailsItem" data="{{...detail}}" />
+
+<!--<view class="pkg">
+  <view class="title">
+      <view class="icon_inblock"><image src="../../images/label.png"></image></view>
+      <text>套餐评价</text>
+  </view>
+    <template is="evaluatesItem" data="{{...detail}}" />
+  </view>-->
+<view class="shopCar" bindtap="shopCarDetail"><image src="../../images/shop_car.png"></image></view>
+<!--</view>-->

@@ -1,0 +1,73 @@
+<template name="detailsItem">
+  <view class="coverpath">
+    <block wx:if="{{coverpath}}">
+        <image src="{{coverpath}}"  mode="aspectFill"/>
+    </block>
+    <block wx:else>
+        <image src="../../images/default_pic.png" mode="aspectFill"></image>
+    </block>
+  </view>
+  <view class="ar_cont">
+    <text class="ar_cont_h1">{{subject}}</text>
+    <text class="ar_cont_price_common">普通价：{{price}}</text>
+    <view>
+        <block wx:if="{{groupon}}">
+            <text class="ar_cont_price">团购价：{{groupon}}  </text>
+        </block>
+    </view>
+     <view class="advantage_ctn">
+        <view class="advantage">
+            <view class="icon_inblock"><image src="../../images/tuikuan.png"></image></view>
+            <text>随时退款</text>
+         </view>
+         <view class="advantage ml30">
+            <view class="icon_inblock"><image src="../../images/report.png"></image></view>
+            <text>电子报告</text>
+         </view>
+    </view>
+  </view>
+  <view class="gap"></view>
+  <view class="pkg">
+    <view class="title">
+      <view class="icon_inblock"><image src="../../images/label.png"></image></view>
+      <text>套餐特点</text>
+    </view>
+    
+  </view>
+   <view class="gap"></view>
+  <view class="pkg h90">
+    <view class="title">
+      <view class="icon_inblock"><image src="../../images/label.png"></image></view>
+      <text>查看城市与机构</text>
+      <text class="r-arrow">></text>
+    </view>
+  </view>
+   <view class="gap"></view>
+   <view class="pkg">
+    <view class="title">
+      <view class="icon_inblock"><image src="../../images/label.png"></image></view>
+      <text>详情描述</text>
+    </view>
+  </view>
+  <view class="gap"></view>
+  
+  <view class="dfooter">
+     <view class="f_btn">
+        <view class="icon"><image src="../../images/question.png"></image></view>
+        <text>客服</text>
+     </view>
+     <view class="f_btn">
+        <view class="icon"><image src="../../images/shoucang.png"></image></view>
+        <text>收藏</text>
+     </view>
+     <view class="f_btn">
+         <button class="group" bindtap="bookTap">我要拼团</button>
+      </view>
+      <view class="f_btn">
+        <button class="shop" bindtap="addCart">加入购物车</button>
+      </view>
+      <view class="f_btn">
+        <button class="book" bindtap="bookTap">立即购买</button>
+      </view>
+  </view>
+</template>

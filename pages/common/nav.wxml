@@ -1,0 +1,26 @@
+<template name="nav">
+    <!--<view class="weui-flex topbar">
+      <block wx:for="{{ navList }}" wx:key="">
+        <view data-type="{{ item._id }}" data-index="{{ index }}" class="weui-flex__item" catchtap="onTapTag">
+        	<view class="topbar-item {{ index == activeIndex ? 'active' : '' }}">{{ item.name }}</view>
+        </view>
+      </block>
+    </view>-->
+
+    <view class="nav_top">
+      <view class="nav_top_in">
+        <block wx:for="{{navTopItems_1}}" wx:key="item.id">
+          <view class="nav_top_items {{curNavId == item.id ? 'active_'+colors[0] : 'active_'+colors[1]}}" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id}}">
+            <text>{{item.title}}</text>
+     </view>
+    </block>
+      </view>
+      <view class="nav_top_in">
+        <block wx:for="{{navTopItems_2}}" wx:key="item.id">
+          <view class="nav_top_items {{curNavId == item.id ? 'active_'+colors[0] : 'active_'+colors[1]}}" bindtap="switchTab" data-index="{{index + 4}}" data-id="{{item.id}}">
+            <text>{{item.title}}</text>
+          </view>
+      </block>
+      </view>
+    </view>
+</template>

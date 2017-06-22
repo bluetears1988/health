@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<!--<view class="container">-->
+<import src="../common/list.wxml"/>
+    <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+              autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for-items="{{banner_url}}" wx:key="item.id">
+              <swiper-item>
+                <block wx:if="{{item}}">
+                  <image src="{{item}}"  mode="aspectFill"/>
+                </block>
+                <block wx:else>
+                  <image src="../../images/default_pic.png" mode="aspectFill"></image>
+                </block>
+              </swiper-item>
+          </block>
+      </swiper>
+    </view>
+    <view class="weui-search-bar" style="width: 100%;">
+      <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="请输入搜索词"/>
+          </view>
+          <label class="weui-search-bar__label" bindtap="search">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">请输入搜索词</view>
+          </label>
+      </view>
+    </view>
+    <!--list-->
+    <view class="shopCar" bindtap="shopCarDetail"><image src="../../images/shop_car.png"></image></view>
+    <template is="list" data="{{ list, stars, star_index, selectedSrc, halfSrc, prompt }}"/>
+    <view class="weui-loadmore weui-loadmore_line">
+        <text class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多数据</text>
+    </view>
+<!--</view>-->

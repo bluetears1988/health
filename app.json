@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/start/index",
+    "pages/index/index",
+    "pages/family/index",
+    "pages/vip/vip",
+    "pages/gifts/gifts",
+    "pages/groups/groups",
+    "pages/logs/logs",
+    "pages/talks/talks",
+    "pages/books/books",
+    "pages/reports/reports",
+     "pages/users/users",
+     "pages/detail/detail",
+     "pages/consult/consult",
+     "pages/evaluate/evaluate",
+     "pages/shopcar/shopcar",
+     "pages/login/index",
+     "pages/search/index",
+     "pages/order/list/index",
+      "pages/order/confirm/index",
+      "pages/order/detail/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#37383c",
+    "navigationBarTitleText": "一家健康",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color":"#333",
+    "selectedColor":"#d24a58",
+    "backgroundColor":"#f6f6f7",
+    "borderStyle":"white",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text":"首页",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/home_clk.png"
+      },
+      {
+        "pagePath": "pages/groups/groups",
+        "text": "团健康",
+        "iconPath":"images/group.png",
+        "selectedIconPath":"images/group_clk.png"
+       },
+       {
+        "pagePath": "pages/family/index",
+        "text": "一家人",
+        "iconPath":"images/group.png",
+        "selectedIconPath":"images/group_clk.png"
+       },
+      {
+        "pagePath": "pages/users/users",
+        "text": "我的",
+        "iconPath":"images/my.png",
+        "selectedIconPath":"images/my_clk.png"
+      }
+    ]
+  }
+}

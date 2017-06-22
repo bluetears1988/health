@@ -1,0 +1,72 @@
+<import src="../common/prompt.wxml"/>
+
+<template name="list">
+    <template is="prompt" data="{{ prompt }}"/>
+    
+	<!--<view class="scroll-list">
+		<view class="weui-panel weui-panel_access" wx:if="{{ !!goods.paginate.total }}">
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{ goods.items }}" wx:key="" bindtap="navigateTo" data-id="{{ item._id }}">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="{{ item.thumb_url }}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">{{ item.name }}</view>
+                        <view class="weui-media-box__desc">
+                            <text class="text-orangered">¥ {{ item.price }}</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+	</view>-->
+    <scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore">
+    <view class="nav_section">
+        <view wx:if="{{list}}">
+        <block wx:for-items="{{list}}" wx:key="">
+            <view class="nav_section_items">
+                <!--image-->
+                <view class="section_image" bindtap="navigateDetail" data-pkgctn="{{item.pkgctn}}" data-pkgtype="{{item.pkgtype}}" data-pkgid="{{item.pkgid}}">
+                    <block wx:if="{{item.coverpath}}">
+                        <image src="{{item.coverpath}}" mode="aspectFill"></image>
+                    </block>
+                    <block wx:else>
+                        <image src="../../images/default_pic.png" mode="aspectFill"></image>
+                    </block>
+                </view>
+                <!--content-->
+                <view class="section_cont" bindtap="navigateDetail" data-pkgctn="{{item.pkgctn}}" data-pkgtype="{{item.pkgtype}}" data-pkgid="{{item.pkgid}}">
+                    <view class="section_cont_sub">
+                        <text>{{item.subject}}</text>
+                    </view>
+                    <view class="section_cont_intro">适用人群：<text>{{item.people}}</text></view>
+                    <view class="section_cont_intro">包含<text>{{item.symptom}}</text>等</view>
+                    <view class="section_cont_price">
+                      <!--<block wx:for="{{stars}}" wx:for-item="star_index">
+                        <image class="star-image" style="left: {{star_index*150}}rpx" src="{{item.stars > star_index ?(item.stars-star_index == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+                        </image>
+                      </block>-->
+                      <text class="price">¥<text class="price_txt">{{item.price}}</text></text>
+                      <text class="init_price">{{item.init_price}}</text>
+                      <block wx:if="{{item.sales > 0}}">
+                        <text class="sales">销量<text>{{item.sales}}</text>件</text>
+                      </block>
+                    </view>
+                    <!--<view class="count_people">
+                        <block wx:if="{{item.population}}">
+                            {{item.population}}人已体检
+                        </block>
+                        <block wx:if="{{item.groupon}}">
+                          <view class="line"></view>
+                          <text class="groupon">支持团购</text>
+                        </block>
+                    </view>-->
+                    
+                </view>
+            </view>
+        </block>
+      </view>
+      <view wx:else>暂无数据</view>
+    </view>
+  </scroll-view>
+</template>

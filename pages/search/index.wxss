@@ -1,0 +1,38 @@
+/* pages/search/index.wxss */
+/* 导航条 */
+.nav_top{
+    width: 100%;
+    height: 150rpx;
+    color:black;
+    background-color: lightgray;
+}
+.nav_top_in{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-around;
+   box-sizing: border-box;
+}
+.nav_top_items{
+    text-align: center;
+    font-size:28rpx;
+    line-height: 35rpx;
+    width:130rpx;
+    height: 35rpx;
+    margin-top: 25rpx;
+    border-radius:22rpx;
+    background-color: white;
+    box-sizing:border-box;
+}
+.topbar {
+    background: #fff;
+}
+
+.topbar-item {
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topbar-item.active {
+    color: #479de6;
+}

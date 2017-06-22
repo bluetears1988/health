@@ -1,0 +1,271 @@
+/**index.wxss**/
+/*.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}*/
+/*navigator{
+  display: inline-block;
+}
+.btn-area{
+  position: fixed;
+  bottom: 0;
+}*/
+/*.imgs_banner{
+  width: 100%;
+  margin:0rpx;
+  padding:0rpx;
+  height: 332rpx;
+}*/
+/* 轮播图 */
+/*{
+  margin:0rpx;
+  padding:0rpx;
+}*/
+.swiper{
+    width:100%;
+    margin:0rpx;
+    padding:0rpx;
+    /*height: 332rpx;*/
+}
+.swiper image{
+    display: inline;
+}
+/* 导航条 */
+.nav_top{
+    width: 100%;
+    height: 150rpx;
+    color:black;
+    background-color: lightgray;
+}
+.nav_top_in{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-around;
+   box-sizing: border-box;
+}
+.nav_top_items{
+    text-align: center;
+    font-size:28rpx;
+    line-height: 35rpx;
+    width:130rpx;
+    height: 35rpx;
+    margin-top: 25rpx;
+    border-radius:22rpx;
+    background-color: white;
+    box-sizing:border-box;
+}
+/*.nav_top_items image{
+    width:83rpx;
+    height:93rpx;
+    display: inline-block;
+}
+.nav_top .active{
+    color:#38b337;
+}
+.active_red{
+    color:#e5004f;
+}
+.active_orange{
+    color:#eb6100;
+}
+.active_yellow{
+    color:#fff100;
+}
+.active_green{
+    color:#8fc31f;
+}
+.active_purple{
+    color:#aa2adf;
+}*/
+.active_green{
+    color:white;
+    background-color: limegreen;
+}
+.active_white{
+    color:black;
+    background-color: white;
+}
+/* 导航对应内容项 */
+.nav_section{
+    width:100%;
+}
+.nav_section_items{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:25rpx;
+    padding-left: 40rpx;
+    border-bottom:2rpx solid #ddd;
+    position: relative;
+}
+.nav_section_items:active{
+    background:#ddd;
+}
+.nav_section_items .section_image{
+    /*width:170rpx;
+    height:158rpx;*/
+    width: 250rpx;
+}
+.nav_section_items .section_image image{
+    width:100%;
+    height:100%;
+}
+.nav_section_items .section_cont{
+    width:400rpx;
+    font-size:26rpx;
+    color:#a9a9a9;
+}
+.nav_section_items .section_cont view{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    display: block;
+}
+.nav_section_items .section_cont .section_cont_intro{
+    white-space:normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.nav_section_items .section_cont .section_cont_sub{
+    font-size: 35rpx;
+    line-height:45rpx;
+    /*font-size: 17pt;*/
+    font-weight: bold;
+    color:#000;
+    /*margin-bottom:10rpx;*/
+}
+.nav_section_items .section_cont .section_cont_intro{
+    font-size: 28rpx;
+    color:#888;
+}
+.nav_section_items .section_cont .section_cont_price{
+    margin-top: 10rpx;
+    font-size:25rpx;
+    line-height:38rpx;
+   /*`color:#888;*/
+}
+.nav_section_items .line{
+    height: 0;
+    border-bottom:2rpx solid #ddd;
+    margin-top: 30rpx;
+}
+.init_price{
+    text-decoration:line-through;
+    display: inline-block;
+    margin-left: 25rpx;
+}
+.price{
+    display: inline-block;
+    color:#FF6600 ;
+}
+.price_txt{
+    font-size:38rpx;
+    /*margin-left: 30rpx;*/
+    font-weight: bold;
+}
+.sales{
+    float: right;
+}
+.count_people{
+    margin-top: 15rpx;
+    color: 	#a9a9a9;
+    font-size:25rpx;
+    font-weight: bold;
+}
+ .groupon{
+    display: inline-block;
+    font-size:25rpx;
+    width: 120rpx;
+    height: 32rpx;
+    line-height:32rpx; 
+    background-color: limegreen;
+    color: white;
+    text-align: center;
+    margin-left: 26rpx;
+}
+.nav_section_items .section_book{
+    width:80rpx;
+    height:80rpx;
+    font-size:26rpx;
+    border-radius:100%;
+    background:#d24a58;
+    line-height: 80rpx;
+    color:#fff;
+    text-align: center;
+    margin-top:35rpx;
+}
+
+.star-image{
+  /*position: absolute;
+  top: 50rpx;*/
+  width: 28rpx;
+  height: 28rpx;
+  src: "../../images/normal.png";
+}
+.packages_list{
+  width: 100%;
+}
+
+
+
+
+.scroll-list {
+    overflow: hidden;
+}
+
+.weui-icon-search, 
+.weui-search-bar__text {
+    vertical-align: inherit;
+}
+
+.topbar {
+    background: #fff;
+}
+
+.topbar-item {
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topbar-item.active {
+    color: #479de6;
+}
+
+.swiper_box {
+    width: 100%;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.shopCar{
+    position: fixed;
+    bottom: 50rpx;
+    right: 50rpx;
+    z-index: 100;
+}
+.shopCar image{
+    width:90rpx;
+    height:90rpx;
+}

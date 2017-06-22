@@ -1,0 +1,62 @@
+<!--pages/users/users.wxml-->
+<!--<view class="container">-->
+    <!--<block wx:if="{{hasLogin === false}}">
+        <text class="page-body-text">每个微信号中仅需登录一次</text>
+        <button class="page-body-button" type="primary" bindtap="login">微信登录</button>
+    </block>-->
+
+    <!--<block wx:if="{{hasLogin === true}}">-->
+        <!--<view class="user">
+            <view class="portrait"></view>
+            <view class="info">
+                <text class="name"></text>
+                <text class="score"></text>
+            </view>
+        </view>-->
+        <view  bindtap="bindViewTap" class="userinfo">
+            <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+	    </view>
+        <view class="gap"></view>
+        <view class="ctn">
+            <block wx:for-items="{{items}}" wx:key="item.id">
+                <view bindtap="navigateTo" data-path="{{ item.path }}" data-index="{{ index }}">
+                    <view class="icon_inblock"><image src="{{item.icon}}"></image></view>
+                    <text>{{item.text}}</text>
+                    <text class="r-arrow">></text>
+                </view>
+            </block>
+            <!--<view>
+                <view class="icon_inblock"><image src="../../images/order.png"></image></view>
+                <text>我的订单</text>
+                <text class="r-arrow">></text>
+            </view>-->
+        </view>
+        <view class="gap"></view>
+        <view class="ctn">
+         <block wx:for-items="{{settings}}" wx:key="item.id">
+            <view bindtap="navigateTo" data-path="{{ item.path }}" data-index="{{ index }}">
+                <view class="icon_inblock"><image src="{{item.icon}}"></image></view>
+                <text>{{item.text}}</text>
+                <text class="r-arrow">></text>
+            </view>
+        </block>
+            <!--<view>
+                <icon type="String"></icon>
+                <text>我的收藏</text>
+                <icon type="String"></icon>
+            </view>-->
+            <!--<view>
+                <view class="icon_inblock"><image src="../../images/msg.png"></image></view>
+                <text>消息</text>
+                <text class="r-arrow">></text>
+            </view>
+            <view>
+                <view class="icon_inblock"><image src="../../images/kefu.png"></image></view>
+                <text>联系客服</text>
+                <text class="r-arrow">></text>
+            </view>-->
+        </view>
+        <view class="logout" bindtap="logout">登出账号</view>
+    <!--/-->
+<!--</view>-->

@@ -1,0 +1,35 @@
+<!--pages/groups/groups.wxml-->
+<!--<text>pages/groups/groups.wxml</text>-->
+<!--<view class="container">-->
+    <view class="weui-search-bar" style="width: 100%;">
+      <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索"/>
+          </view>
+          <label class="weui-search-bar__label" bindtap="search">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+          </label>
+    </view>
+</view> 
+    <scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore">
+        <block wx:for-items="{{groups}}" wx:key="item">
+            <view class="group_item">
+                <view class="title">
+                    {{item.title}}
+                </view>
+                <view class="price shichang_price">
+                    <text>市场价：</text><text>¥{{item.shichang_price}}</text>
+                </view>
+                <view class="price">
+                    <view class="lowest_price"><text class="lowest_label">最低价</text><text>¥{{item.lowest_price}}</text></view>
+                    <view class="open"><text>马上开团></text></view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+    <view class="weui-loadmore weui-loadmore_line">
+        <text class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多数据</text>
+    </view>
+<!--</view>-->
